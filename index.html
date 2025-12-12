@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readio - Privacy Policy</title>
+    <title>Readio - 隐私政策</title>
     <style>
         :root {
             --primary-color: #000000;
@@ -48,17 +48,28 @@
 
         .lang-switch {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* 按钮之间的间距 */
         }
 
         .lang-btn {
             background: none;
             border: 1px solid var(--primary-color);
-            padding: 5px 15px;
             cursor: pointer;
-            margin: 0 5px;
-            border-radius: 10px;
-            font-size: 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
+            
+            /* --- 核心修改：统一长宽 --- */
+            width: 90px;  /* 固定宽度 */
+            height: 36px; /* 固定高度 */
+            padding: 0;   /* 清除内边距 */
+            
+            /* 让文字在固定宽高中水平垂直居中 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .lang-btn.active {
@@ -124,58 +135,14 @@
 <div class="container">
     <header>
         <h1>Readio</h1>
-        <div class="subtitle">Privacy Policy / 隐私政策</div>
+        <div class="subtitle">隐私政策 / Privacy Policy</div>
         <div class="lang-switch">
             <button class="lang-btn" onclick="switchLang('en')">English</button>
             <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
         </div>
     </header>
 
-    <div id="en-content" class="content-section active">
-        <h2>Privacy Policy</h2>
-        <p>Last Updated: December 12, 2025</p>
-        
-        <p>Welcome to <strong>Readio</strong>. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle your information when you use our application.</p>
-
-        <h3>1. No Data Collection</h3>
-        <p><strong>Readio is a local-first application.</strong> We do not operate a backend server to collect, store, or process your personal information. We do not require you to register an account or provide any personal details (such as your name, phone number, or email address) to use the App.</p>
-
-        <h3>2. Local Data Storage</h3>
-        <p>All data generated during your use of the App is stored locally on your device. This includes:</p>
-        <ul>
-            <li><strong>Subscription List:</strong> The RSS feeds and podcast URLs you add.</li>
-            <li><strong>Playback History:</strong> Your listening progress and history records.</li>
-            <li><strong>Settings:</strong> Your app preferences.</li>
-        </ul>
-        <p>This data remains on your device. If you uninstall the App or clear the App data, this information will be permanently deleted and cannot be recovered by us.</p>
-
-        <h3>3. Network Access</h3>
-        <p>The App requires internet access to function. When you refresh a feed or play a podcast:</p>
-        <ul>
-            <li>The App connects <strong>directly</strong> to the third-party RSS/Podcast servers you have subscribed to.</li>
-            <li>Your request (including your IP address) is visible to those third-party content providers, just as it would be if you visited their website directly.</li>
-            <li>We (Readio developers) do not intercept, route, or store these requests.</li>
-        </ul>
-
-        <h3>4. Permissions</h3>
-        <p>We may request the following permissions on your device:</p>
-        <ul>
-            <li><strong>Network:</strong> To fetch RSS feeds and stream audio.</li>
-            <li><strong>Audio/Microphone:</strong> The App uses system audio services for playback control. While the system may group this under "Microphone" permissions in some contexts (for audio session handling), <strong>we do not record any audio</strong>.</li>
-        </ul>
-
-        <h3>5. Third-Party Content</h3>
-        <p>The App displays content from third-party sources (RSS feeds) added by you. We are not responsible for the privacy practices or content of these third-party sources. When you click on an article link, it may open in a web view or your system browser; this interaction is subject to the privacy policy of the website you are visiting.</p>
-
-        <h3>6. Changes to This Policy</h3>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-
-        <h3>7. Contact Us</h3>
-        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
-        <p>Email: <a href="mailto:xuqiuli2023@qq.com">xuqiuli2023@qq.com</a></p>
-    </div>
-
-    <div id="zh-content" class="content-section">
+    <div id="zh-content" class="content-section active">
         <h2>隐私政策</h2>
         <p>更新日期：2025年12月12日</p>
         
@@ -219,6 +186,50 @@
         <p>电子邮箱：<a href="mailto:xuqiuli2023@qq.com">xuqiuli2023@qq.com</a></p>
     </div>
 
+    <div id="en-content" class="content-section">
+        <h2>Privacy Policy</h2>
+        <p>Last Updated: December 12, 2025</p>
+        
+        <p>Welcome to <strong>Readio</strong>. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we handle your information when you use our application.</p>
+
+        <h3>1. No Data Collection</h3>
+        <p><strong>Readio is a local-first application.</strong> We do not operate a backend server to collect, store, or process your personal information. We do not require you to register an account or provide any personal details (such as your name, phone number, or email address) to use the App.</p>
+
+        <h3>2. Local Data Storage</h3>
+        <p>All data generated during your use of the App is stored locally on your device. This includes:</p>
+        <ul>
+            <li><strong>Subscription List:</strong> The RSS feeds and podcast URLs you add.</li>
+            <li><strong>Playback History:</strong> Your listening progress and history records.</li>
+            <li><strong>Settings:</strong> Your app preferences.</li>
+        </ul>
+        <p>This data remains on your device. If you uninstall the App or clear the App data, this information will be permanently deleted and cannot be recovered by us.</p>
+
+        <h3>3. Network Access</h3>
+        <p>The App requires internet access to function. When you refresh a feed or play a podcast:</p>
+        <ul>
+            <li>The App connects <strong>directly</strong> to the third-party RSS/Podcast servers you have subscribed to.</li>
+            <li>Your request (including your IP address) is visible to those third-party content providers, just as it would be if you visited their website directly.</li>
+            <li>We (Readio developers) do not intercept, route, or store these requests.</li>
+        </ul>
+
+        <h3>4. Permissions</h3>
+        <p>We may request the following permissions on your device:</p>
+        <ul>
+            <li><strong>Network:</strong> To fetch RSS feeds and stream audio.</li>
+            <li><strong>Audio/Microphone:</strong> The App uses system audio services for playback control. While the system may group this under "Microphone" permissions in some contexts (for audio session handling), <strong>we do not record any audio</strong>.</li>
+        </ul>
+
+        <h3>5. Third-Party Content</h3>
+        <p>The App displays content from third-party sources (RSS feeds) added by you. We are not responsible for the privacy practices or content of these third-party sources. When you click on an article link, it may open in a web view or your system browser; this interaction is subject to the privacy policy of the website you are visiting.</p>
+
+        <h3>6. Changes to This Policy</h3>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h3>7. Contact Us</h3>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
+        <p>Email: <a href="mailto:xuqiuli2023@qq.com">xuqiuli2023@qq.com</a></p>
+    </div>
+
     <div class="footer">
         &copy; 2025 Readio. All rights reserved.
     </div>
@@ -234,6 +245,7 @@
         document.getElementById(lang + '-content').classList.add('active');
         
         // Update buttons
+        // 0 is English, 1 is Chinese
         const btnIndex = lang === 'en' ? 0 : 1;
         document.querySelectorAll('.lang-btn')[btnIndex].classList.add('active');
         
@@ -244,8 +256,9 @@
     // Auto-detect browser language
     window.onload = function() {
         const userLang = navigator.language || navigator.userLanguage; 
-        if (userLang.startsWith('zh')) {
-            switchLang('zh');
+        // 只有当用户浏览器明确是英文时，才自动切换到英文，否则默认保持中文
+        if (userLang.startsWith('en')) {
+            switchLang('en');
         }
     };
 </script>
